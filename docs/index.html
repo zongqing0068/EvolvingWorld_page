@@ -3,89 +3,100 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>EvolvingWorld — Interactive Literary Worlds that Evolve</title>
-  <meta name="description" content="An open-schema framework for co-evolving Character Agents and a World Model in interactive literary worlds.">
+  <title>EvolvingWorld</title>
+  <meta name="description" content="An Open-Schema Framework for Co-Evolving Role-Play Agents and World Model in Interactive Literary World.">
   <meta property="og:title" content="EvolvingWorld">
-  <meta property="og:description" content="Interactive literary worlds that remember and evolve.">
-  <meta property="og:image" content="https://zongqing0068.github.io/EvolvingWorld_page/pipeline.png">
+  <meta property="og:description" content="Character and world co-evolution in interactive literary worlds.">
+  <meta property="og:image" content="https://zongqing0068.github.io/EvolvingWorld_page/figure-2-framework.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="nav shell">
-    <a class="wordmark" href="#top"><span class="mark">EW</span><span>EvolvingWorld</span></a>
-    <nav><a href="#method">Method</a><a href="#demo">Demo</a><a href="#results">Results</a></nav>
+  <header class="topbar wrap">
+    <a class="brand" href="#top">EvolvingWorld</a>
+    <nav><a href="#overview">Overview</a><a href="#method">Method</a><a href="#results">Results</a><a href="#demo">Demo</a></nav>
   </header>
 
-  <main>
-    <section class="hero shell" id="top">
-      <div class="venue-pill"><span></span> EMNLP 2026</div>
-      <h1>Literary worlds<br>that <em>remember</em> and evolve.</h1>
-      <p class="lede">An open-schema framework where Character Agents and a World Model co-evolve through interaction—scene after scene.</p>
-      <div class="actions">
-        <a class="button primary" href="https://arxiv.org/abs/2607.17250">Read the paper ↗</a>
-        <a class="button" href="https://github.com/HKUST-KnowComp/EvolvingWorld">View code ↗</a>
-        <a class="button" href="https://huggingface.co/datasets/zongqing0068/EvolvingWorld">Get data ↗</a>
-      </div>
+  <main id="top">
+    <section class="hero wrap">
+      <div class="eyebrow">EMNLP 2026</div>
+      <h1>EvolvingWorld: An Open-Schema Framework for Co-Evolving Role-Play Agents and World Model in Interactive Literary World</h1>
       <p class="authors">Qing Zong · Yue Guo · Mengxin Yang · Yiwen Guo · Yangqiu Song</p>
-      <div class="world-stage">
-        <div class="stage-label">Persistent co-evolution</div>
-        <article class="agent-node character-node"><span class="node-index">01</span><small>Character Agent</small><strong>Profiles, motivations<br>&amp; interactions</strong></article>
-        <div class="exchange"><span>actions reshape the world</span><div class="exchange-lines"><i></i><i></i></div><span>world changes shape characters</span></div>
-        <article class="agent-node world-node"><span class="node-index">02</span><small>World Model</small><strong>Scenes, locations<br>&amp; persistent state</strong></article>
+      <div class="links">
+        <a class="primary" href="https://arxiv.org/abs/2607.17250">Paper</a>
+        <a href="https://github.com/HKUST-KnowComp/EvolvingWorld">Code</a>
+        <a href="https://huggingface.co/datasets/zongqing0068/EvolvingWorld">Dataset</a>
       </div>
     </section>
 
-    <section class="method-preview shell" id="method">
-      <div class="section-kicker">Core design</div>
-      <h2>Beyond static personas<br>and passive backdrops.</h2>
-      <div class="feature-grid">
-        <article><b>01</b><h3>Co-evolution</h3><p>Every interaction can leave a lasting trace on both characters and their world.</p></article>
-        <article><b>02</b><h3>Open schema</h3><p>Book-specific dimensions adapt automatically across radically different literary worlds.</p></article>
-        <article><b>03</b><h3>Hidden tracker</h3><p>Weak evidence accumulates before slower traits evolve, enabling multiple timescales.</p></article>
+    <section class="intro wrap">
+      <div class="abstract">
+        <h2>Abstract</h2>
+        <p>EvolvingWorld is a framework and benchmark for character and world co-evolution in interactive literary worlds. It models literary simulation as a long-horizon process where characters interact, scenes progress, and character and world states are persistently updated.</p>
+        <p>Unlike prior systems relying on fixed schemas, EvolvingWorld supports diverse literary worlds through two coupled modules: a Character Agent for multi-character role-play and persistent profile evolution, and an LLM-based World Model for global and location/entity-level state maintenance and scene progression.</p>
+      </div>
+      <figure class="paper-figure case-figure"><img src="figure-1-case-study.png" alt="EvolvingWorld case study from A Doll's House"><figcaption>Figure 1. A simulation case from <em>A Doll’s House</em>. Character and world states evolve through interaction.</figcaption></figure>
+    </section>
+
+    <section class="section wrap" id="overview">
+      <div class="section-title"><span>01</span><div><h2>Framework Overview</h2><p>Data construction, training and testing samples, the co-evolution simulation pipeline, and trajectory-level evaluation.</p></div></div>
+      <figure class="paper-figure wide"><img src="figure-2-framework.png" alt="Overview of the EvolvingWorld framework"><figcaption>Figure 2. Overview of the EvolvingWorld framework.</figcaption></figure>
+    </section>
+
+    <section class="section wrap" id="method">
+      <div class="section-title"><span>02</span><div><h2>Open-Schema Co-Evolution</h2><p>Character actions can reshape locations or social orders, while world changes can in turn alter motivations and profiles.</p></div></div>
+      <div class="method-grid">
+        <article><h3>Character–World Co-Evolution</h3><p>A Character Agent and World Model jointly maintain persistent states across scenes, so interactions have lasting effects on both characters and their world.</p></article>
+        <article><h3>Open-Schema States</h3><p>The system infers relevant character and world dimensions from each book instead of forcing diverse stories into fixed slots.</p></article>
+        <article><h3>Multi-Timescale Evolution</h3><p>A hidden tracker stores weak or emerging evidence before it is sufficient to update slower-changing profile dimensions.</p></article>
+      </div>
+      <figure class="paper-figure wide top-gap"><img src="figure-4-open-schema.png" alt="Word clouds of open-schema character and world state dimensions"><figcaption>Figure 4. State dimensions discovered under the open-schema design across the 57-book corpus.</figcaption></figure>
+    </section>
+
+    <section class="section soft" id="results">
+      <div class="wrap">
+        <div class="section-title"><span>03</span><div><h2>Long-Horizon Results</h2><p>EvolvingWorld mitigates the degradation of profile evolution smoothness and scene continuity as trajectories become longer.</p></div></div>
+        <div class="result-layout">
+          <figure class="paper-figure"><img src="figure-3-long-horizon.png" alt="Length-wise comparison with BookWorld"><figcaption>Figure 3. Length-wise comparison with BookWorld on PES and SCC.</figcaption></figure>
+          <div class="result-text">
+            <div class="metric"><strong>59.87</strong><span>World Model average</span></div>
+            <p>The EvolvingWorld-trained 32B Qwen model surpasses Claude-4.6-Sonnet and Gemini-2.5-Flash on World Model evaluation.</p>
+            <p>Ablations show that character state updates and world state updates affect different but coupled parts of long-horizon simulation.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="manifesto">
-      <div class="shell manifesto-grid">
-        <div class="section-kicker">The motivation</div>
-        <p class="manifesto-copy">A believable interactive world is more than a cast of convincing personas. Interactions should reshape characters, locations, entities, and even the world setting—and those changes should persist into what happens next.</p>
-        <div class="manifesto-aside"><span>Built for</span><p>Interactive fiction · AI teammates · Open-world games</p></div>
+    <section class="section wrap" id="data">
+      <div class="section-title"><span>04</span><div><h2>Dataset and Benchmark</h2><p>57 books, 138,596 supervised training samples, 222 test snapshots, and trajectory-level evaluation across 20 metrics.</p></div></div>
+      <div class="figure-grid">
+        <figure class="paper-figure"><img src="figure-5-genres.png" alt="Genre distribution"><figcaption>Figure 5. Genre distribution of the 57 books.</figcaption></figure>
+        <figure class="paper-figure"><img src="figure-6-data.png" alt="Extracted data statistics"><figcaption>Figure 6. Extracted data statistics at four granularity levels.</figcaption></figure>
+      </div>
+      <figure class="paper-figure token-figure"><img src="figure-7-tokens.png" alt="Token length distribution"><figcaption>Figure 7. Token length distribution for the seven trainable tasks.</figcaption></figure>
+    </section>
+
+    <section class="section soft" id="demo">
+      <div class="wrap">
+        <div class="section-title"><span>05</span><div><h2>Demo and Downstream Application</h2><p>Structured trajectories produced by EvolvingWorld can be used for interactive simulation and downstream video generation.</p></div></div>
+        <div class="demo-grid">
+          <div class="video-card"><video controls playsinline preload="metadata" poster="demo-poster.jpg"><source src="evolvingworld-demo.mp4" type="video/mp4"></video><p>Full EvolvingWorld demo · 02:25</p></div>
+          <figure class="paper-figure"><img src="figure-8-video.png" alt="Four-scene video generated from Alice's Adventures in Wonderland"><figcaption>Figure 8. A four-scene video generated from <em>Alice’s Adventures in Wonderland</em>.</figcaption></figure>
+        </div>
       </div>
     </section>
 
-    <section class="demo-section shell" id="demo">
-      <div class="section-heading"><div><div class="section-kicker">Demo</div><h2>Watch a world<br>continue to unfold.</h2></div><p>Starting from a literary snapshot, EvolvingWorld plans scenes, generates multi-character interactions, and updates persistent character and world states along the trajectory.</p></div>
-      <div class="video-frame"><video controls playsinline preload="metadata" poster="demo-poster.jpg"><source src="evolvingworld-demo.mp4" type="video/mp4"></video><div class="video-caption"><span>Demo film</span><span>02:25</span></div></div>
-    </section>
-
-    <section class="pipeline-section">
-      <div class="shell">
-        <div class="section-heading compact"><div><div class="section-kicker">Framework</div><h2>From books to<br>evolving worlds.</h2></div><p>Seven trainable tasks connect literary data extraction, scene planning, interaction generation, and persistent state updates.</p></div>
-        <figure class="pipeline-figure"><img src="pipeline.png" alt="EvolvingWorld framework pipeline"><figcaption>Overview of the EvolvingWorld framework and benchmark.</figcaption></figure>
-      </div>
-    </section>
-
-    <section class="results shell" id="results">
-      <div class="section-heading compact"><div><div class="section-kicker">Evidence</div><h2>Data that teaches<br>world evolution.</h2></div><p>Book-to-world supervision consistently improves both Character Agents and World Models across model families, scales, and unseen books.</p></div>
-      <div class="stat-grid"><article><strong>57</strong><span>literary books</span></article><article><strong>138,596</strong><span>training samples</span></article><article><strong>222</strong><span>ID / OOD test snapshots</span></article><article><strong>20</strong><span>trajectory-level metrics</span></article></div>
-      <div class="result-callout">
-        <div class="result-main"><small>World Model · Average score</small><strong>59.87</strong><p>The EvolvingWorld-trained 32B Qwen model surpasses Claude-4.6-Sonnet and Gemini-2.5-Flash on World Model evaluation.</p></div>
-        <div class="result-bars"><div><span>Qwen 32B + EW</span><i style="width:100%"></i><b>59.87</b></div><div><span>Gemini 2.5 Flash</span><i style="width:99.8%"></i><b>59.76</b></div><div><span>Claude 4.6 Sonnet</span><i style="width:96.1%"></i><b>57.54</b></div></div>
-      </div>
-      <div class="finding-grid"><article><span>01 / Data</span><h3>Effective across scales</h3><p>Training gains hold across Qwen and Llama backbones, including out-of-distribution books.</p></article><article><span>02 / Framework</span><h3>Both modules matter</h3><p>Ablations show character updates and world updates support distinct—and coupled—parts of evolution.</p></article><article><span>03 / Long horizon</span><h3>Less degradation</h3><p>Co-evolving structured states mitigate profile drift and scene-continuity decay over longer trajectories.</p></article></div>
-    </section>
-
-    <section class="applications"><div class="shell applications-inner"><div class="section-kicker">Looking forward</div><h2>Worlds that respond.<br>Characters that grow.</h2><p>A foundation for interactive literary worlds, persistent AI teammates, and open-world experiences that evolve with every interaction.</p><div class="actions"><a class="button light" href="https://arxiv.org/abs/2607.17250">Paper ↗</a><a class="button light" href="https://github.com/HKUST-KnowComp/EvolvingWorld">GitHub ↗</a><a class="button light" href="https://huggingface.co/datasets/zongqing0068/EvolvingWorld">Dataset ↗</a></div></div></section>
-
-    <section class="citation shell"><div><div class="section-kicker">Citation</div><h2>Build on<br>EvolvingWorld.</h2></div><pre>@article{zong2026evolvingworld,
+    <section class="citation wrap">
+      <div><h2>Citation</h2><p>Data and code are available through the links above.</p></div>
+      <pre>@article{zong2026evolvingworld,
   title={EvolvingWorld: An Open-Schema Framework for Co-Evolving Role-Play Agents and World Model in Interactive Literary World},
   author={Zong, Qing and Guo, Yue and Yang, Mengxin and Guo, Yiwen and Song, Yangqiu},
   journal={arXiv preprint arXiv:2607.17250},
   year={2026}
-}</pre></section>
+}</pre>
+    </section>
   </main>
 
-  <footer class="footer shell"><a class="wordmark" href="#top"><span class="mark">EW</span><span>EvolvingWorld</span></a><p>Interactive literary worlds that remember and evolve.</p><a href="https://arxiv.org/abs/2607.17250">arXiv:2607.17250 ↗</a></footer>
+  <footer class="footer wrap"><span>EvolvingWorld · EMNLP 2026</span><a href="https://arxiv.org/abs/2607.17250">arXiv:2607.17250</a></footer>
 </body>
 </html>
