@@ -23,7 +23,7 @@
       <h1>EvolvingWorld: An Open-Schema Framework for Co-Evolving Role-Play Agents and World Model in Interactive Literary World</h1>
       <p class="authors">Qing Zong · Yue Guo · Mengxin Yang · Yiwen Guo · Yangqiu Song</p>
       <div class="links">
-        <a class="primary" href="https://arxiv.org/abs/2607.17250"><img class="link-icon" src="https://cdn.simpleicons.org/arxiv/B31B1B" alt="">Paper</a>
+        <a href="https://arxiv.org/abs/2607.17250"><img class="link-icon" src="https://cdn.simpleicons.org/arxiv/B31B1B" alt="">Paper</a>
         <a href="https://github.com/HKUST-KnowComp/EvolvingWorld"><img class="link-icon" src="https://cdn.simpleicons.org/github/181717" alt="">Code</a>
         <a href="https://huggingface.co/datasets/zongqing0068/EvolvingWorld"><img class="link-icon" src="https://cdn.simpleicons.org/huggingface/FFD21E" alt="">Dataset</a>
       </div>
@@ -55,14 +55,25 @@
 
     <section class="section soft" id="results">
       <div class="wrap">
-        <div class="section-title"><span>03</span><div><h2>Long-Horizon Results</h2><p>EvolvingWorld mitigates the degradation of profile evolution smoothness and scene continuity as trajectories become longer.</p></div></div>
-        <div class="result-layout">
-          <figure class="paper-figure"><img src="figure-3-long-horizon.png?v=2" alt="Length-wise comparison with BookWorld"><figcaption>Figure 3. Length-wise comparison with BookWorld on PES and SCC.</figcaption></figure>
-          <div class="result-text">
+        <div class="section-title"><span>03</span><div><h2>Results</h2><p>We separately evaluate the effect of EvolvingWorld training data and the effectiveness of the co-evolution framework.</p></div></div>
+        <div class="results-stack">
+          <article class="result-block data-result">
+            <div class="result-copy">
+              <div class="result-kicker">01 · Data Effect</div>
+              <h3>Book-to-world supervision delivers consistent gains over baselines</h3>
+              <p>Across matched backbones and model scales, EvolvingWorld training substantially improves both Character Agent and World Model performance over untrained baselines, with stable gains on unseen books. The EvolvingWorld-trained 32B Qwen model reaches a World Model average of 59.87, surpassing Claude-4.6-Sonnet and Gemini-2.5-Flash.</p>
+            </div>
             <div class="metric"><strong>59.87</strong><span>World Model average</span></div>
-            <p>The EvolvingWorld-trained 32B Qwen model surpasses Claude-4.6-Sonnet and Gemini-2.5-Flash on World Model evaluation.</p>
-            <p>Ablations show that character state updates and world state updates affect different but coupled parts of long-horizon simulation.</p>
-          </div>
+          </article>
+          <article class="result-block framework-result">
+            <figure class="paper-figure"><img src="figure-3-long-horizon.png?v=2" alt="Length-wise comparison with BookWorld"><figcaption>Figure 3. Length-wise comparison with BookWorld on PES and SCC.</figcaption></figure>
+            <div class="result-copy">
+              <div class="result-kicker">02 · Framework Effectiveness</div>
+              <h3>Structured co-evolution mitigates long-horizon degradation</h3>
+              <p>Figure 3 tracks Profile Evolution Smoothness (PES, top) and Scene Continuity &amp; Coherence (SCC, bottom) as the number of simulated scenes increases.</p>
+              <p>BookWorld degrades on both metrics over longer trajectories. In contrast, EvolvingWorld maintains scene continuity while its profile evolution becomes smoother across both evaluated backbones. This shows that persistent Character Agent and World Model state updates reduce profile drift and coherence decay in long-horizon simulation.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
