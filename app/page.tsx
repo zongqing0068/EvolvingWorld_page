@@ -117,7 +117,7 @@ export default function Home() {
             </p>
           </div>
           <figure className="pipeline-figure">
-            <img src="./pipeline.png" alt="The EvolvingWorld data, training, co-evolution simulation, and evaluation pipeline" />
+            <img src="./pipeline.svg" alt="The EvolvingWorld data, training, co-evolution simulation, and evaluation pipeline" />
             <figcaption>Overview of the EvolvingWorld framework and benchmark.</figcaption>
           </figure>
         </div>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="1270" height="440" viewBox="0 0 1270 440" role="img"
+     aria-labelledby="title desc">
+  <title id="title">Open-schema character and world state dimensions</title>
+  <desc id="desc">Word clouds showing character profile dimensions and global world state dimensions.</desc>
+  <rect width="1270" height="440" fill="#fff"/>
+  <image href="open-schema-character.svg" xlink:href="open-schema-character.svg" x="0" y="0" width="635" height="403"
+         preserveAspectRatio="none"/>
+  <image href="open-schema-world.svg" xlink:href="open-schema-world.svg" x="635" y="0" width="635" height="403"
+         preserveAspectRatio="none"/>
+  <text x="317.5" y="429" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#111">
+    (a) Character Profile Dimensions
+  </text>
+  <text x="952.5" y="429" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#111">
+    (b) Global World State Dimensions
+  </text>
+</svg>

@@ -35,12 +35,12 @@
         <p>EvolvingWorld is a framework and benchmark for character and world co-evolution in interactive literary worlds. It models literary simulation as a long-horizon process where characters interact, scenes progress, and character and world states are persistently updated.</p>
         <p>Unlike prior systems relying on fixed schemas, EvolvingWorld supports diverse literary worlds through two coupled modules: a Character Agent for multi-character role-play and persistent profile evolution, and an LLM-based World Model for global and location/entity-level state maintenance and scene progression.</p>
       </div>
-      <figure class="paper-figure case-figure"><img src="figure-1-case-study.png" alt="EvolvingWorld case study from A Doll's House"><figcaption>Figure 1. A simulation case from <em>A Doll’s House</em>. Character and world states evolve through interaction.</figcaption></figure>
+      <figure class="paper-figure case-figure"><img src="figure-1-case-study.svg" alt="EvolvingWorld case study from A Doll's House"><figcaption>Figure 1. A simulation case from <em>A Doll’s House</em>. Character and world states evolve through interaction.</figcaption></figure>
     </section>
 
     <section class="section wrap" id="overview">
       <div class="section-title"><span>01</span><div><h2>Framework Overview</h2><p>Data construction, training and testing samples, the co-evolution simulation pipeline, and trajectory-level evaluation.</p></div></div>
-      <figure class="paper-figure wide"><img src="figure-2-framework.png" alt="Overview of the EvolvingWorld framework"><figcaption>Figure 2. Overview of the EvolvingWorld framework.</figcaption></figure>
+      <figure class="paper-figure wide"><img src="figure-2-framework.svg" alt="Overview of the EvolvingWorld framework"><figcaption>Figure 2. Overview of the EvolvingWorld framework.</figcaption></figure>
     </section>
 
     <section class="section wrap" id="method">
@@ -50,7 +50,7 @@
         <article><h3>Open-Schema States</h3><p>The system infers relevant character and world dimensions from each book instead of forcing diverse stories into fixed slots.</p></article>
         <article><h3>Multi-Timescale Evolution</h3><p>A hidden tracker stores weak or emerging evidence before it is sufficient to update slower-changing profile dimensions.</p></article>
       </div>
-      <figure class="paper-figure wide top-gap"><img src="figure-4-open-schema.png?v=2" alt="Word clouds of open-schema character and world state dimensions"><figcaption>Figure 4. State dimensions discovered under the open-schema design across the 57-book corpus.</figcaption></figure>
+      <figure class="paper-figure wide top-gap"><img src="figure-4-open-schema.svg?v=3" alt="Word clouds of open-schema character and world state dimensions"><figcaption>Figure 4. State dimensions discovered under the open-schema design across the 57-book corpus.</figcaption></figure>
     </section>
 
     <section class="section soft" id="results">
@@ -65,7 +65,7 @@
             </div>
           </article>
           <article class="result-block framework-result">
-            <figure class="paper-figure"><img src="figure-3-long-horizon.png?v=2" alt="Length-wise comparison with BookWorld"><figcaption>Figure 3. Length-wise comparison with BookWorld on PES and SCC.</figcaption></figure>
+            <figure class="paper-figure"><img src="figure-3-long-horizon.svg?v=3" alt="Length-wise comparison with BookWorld"><figcaption>Figure 3. Length-wise comparison with BookWorld on PES and SCC.</figcaption></figure>
             <div class="result-copy">
               <div class="result-kicker">02 · Framework Effectiveness</div>
               <h3>Structured co-evolution mitigates long-horizon degradation</h3>
@@ -80,10 +80,10 @@
     <section class="section wrap" id="data">
       <div class="section-title"><span>04</span><div><h2>Dataset and Benchmark</h2><p>57 books, 138,596 supervised training samples, 222 test snapshots, and trajectory-level evaluation across 20 metrics.</p></div></div>
       <div class="data-grid">
-        <figure class="paper-figure data-main"><img src="figure-6-data.png?v=2" alt="Extracted data statistics"><figcaption>Figure 6. Extracted data statistics at four granularity levels.</figcaption></figure>
+        <figure class="paper-figure data-main"><img src="figure-6-data.svg?v=3" alt="Extracted data statistics"><figcaption>Figure 6. Extracted data statistics at four granularity levels.</figcaption></figure>
         <div class="data-side">
-          <figure class="paper-figure"><img src="figure-5-genres.png" alt="Genre distribution"><figcaption>Figure 5. Genre distribution of the 57 books.</figcaption></figure>
-          <figure class="paper-figure"><img src="figure-7-tokens.png?v=2" alt="Token length distribution"><figcaption>Figure 7. Token length distribution for the seven trainable tasks.</figcaption></figure>
+          <figure class="paper-figure"><img src="figure-5-genres.svg" alt="Genre distribution"><figcaption>Figure 5. Genre distribution of the 57 books.</figcaption></figure>
+          <figure class="paper-figure"><img src="figure-7-tokens.svg?v=3" alt="Token length distribution"><figcaption>Figure 7. Token length distribution for the seven trainable tasks.</figcaption></figure>
         </div>
       </div>
     </section>
@@ -92,7 +92,7 @@
       <div class="wrap">
         <div class="section-title"><span>05</span><div><h2>Demo and Downstream Application</h2><p>Structured trajectories produced by EvolvingWorld can be used for interactive simulation and downstream video generation.</p></div></div>
         <div class="video-card"><video controls playsinline preload="metadata" poster="demo-poster.jpg"><source src="evolvingworld-demo.mp4" type="video/mp4"></video><p>Full EvolvingWorld demo · 02:25</p></div>
-        <figure class="paper-figure demo-paper-figure"><img src="figure-8-video.png" alt="Four-scene video generated from Alice's Adventures in Wonderland"><figcaption>Figure 8. A four-scene video generated from <em>Alice’s Adventures in Wonderland</em>.</figcaption></figure>
+        <figure class="paper-figure demo-paper-figure"><img src="figure-8-video.svg" alt="Four-scene video generated from Alice's Adventures in Wonderland"><figcaption>Figure 8. A four-scene video generated from <em>Alice’s Adventures in Wonderland</em>.</figcaption></figure>
       </div>
     </section>
 
